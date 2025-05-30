@@ -1,0 +1,14 @@
+# Role assignments (user, role)
+g, admin, admin_role
+g, user, user_role
+g, viewer, viewer_role
+
+# Permissions (role, resource, action)
+# Admin can access everything
+p, admin_role, admin_resource, read
+p, admin_role, user_resource, read
+
+# User can access user content only
+p, user_role, user_resource, read
+
+# Viewer cannot access anything (for demo) 
